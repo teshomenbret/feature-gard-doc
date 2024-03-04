@@ -1,0 +1,170 @@
+# Module management Feature
+
+Modules are the top-level organizational unit in Feature Gard. Modules are used to group features and permissions together. Modules are also used to group users and roles together.
+
+Module management is a feature that allows you to manage the modules that are available in your application. You can add, remove, and update modules in using the module management feature API.
+
+## Create a Module
+
+Create a new module.
+
+```
+POST /modules
+```
+
+### Request
+
+#### Headers
+
+```
+Authorization
+Bearer YOUR
+```
+
+#### Body
+
+```json
+{
+  "name": "Module Name"
+}
+```
+
+### Response
+
+```json
+{
+  "id": "module-id",
+  "name": "Module Name",
+  "created_at": "2021-01-01T00:00:00Z",
+  "updated_at": "2021-01-01T00:00:00Z"
+}
+```
+
+## Get a Module
+
+Get a module by ID.
+
+```
+GET /modules/:id
+```
+
+### Request
+
+#### Headers
+
+```
+Authorization
+Bearer YOUR
+```
+
+### Response
+
+```json
+{
+  "id": "module-id",
+  "name": "Module Name",
+  "created_at": "2021-01-01T00:00:00Z",
+  "updated_at": "2021-01-01T00:00:00Z"
+}
+```
+
+## Update a Module
+
+Update a module by ID.
+
+```
+PUT /modules/:id
+```
+
+### Request
+
+#### Headers
+
+```
+Authorization
+Bearer YOUR
+```
+
+#### Body
+
+```json
+{
+  "name": "New Module Name"
+}
+```
+### Response
+
+```json
+{
+  "id": "module-id",
+  "name": "New Module Name",
+  "created_at": "2021-01-01T00:00:00Z",
+  "updated_at": "2021-01-01T00:00:00Z"
+}
+```
+
+## Delete a Module
+
+Delete a module by ID.
+
+```
+DELETE /modules/:id
+```
+
+### Request
+
+#### Headers
+
+```
+Authorization
+Bearer YOUR
+```
+
+### Response
+    
+    ```json
+    {
+    "id": "module-id",
+    "name": "Module Name",
+    "created_at": "2021-01-01T00:00:00Z",
+    "updated_at": "2021-01-01T00:00:00Z"
+    }
+    ```
+
+## List Modules
+
+List all modules.
+
+```
+GET /modules
+```
+
+### Request
+
+#### Headers
+
+```
+Authorization
+Bearer YOUR
+```
+
+### Response
+
+```json
+[
+  {
+    "id": "module-id",
+    "name": "Module Name",
+    "created_at": "2021-01-01T00:00:00Z",
+    "updated_at": "2021-01-01T00:00:00Z"
+  }
+]
+```
+
+
+
+
+
+
+
+

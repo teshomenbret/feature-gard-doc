@@ -1,0 +1,83 @@
+# Feature management Feature
+
+Feature are a way to manage the features of your application. You can enable or disable features based on the user's role or any other condition.
+
+Feature management is a way to manage the features of your application. You can enable or disable features based on the user's role or any other condition.
+
+## Create a Feature
+
+Create a new feature
+
+```
+POST /modules
+```
+
+### Request
+
+#### Headers
+
+```
+Authorization
+Bearer YOUR
+```
+
+#### Body
+
+```json
+{
+  "name": "feature-name",
+  "description": "feature-description",
+  "enabled": true
+}
+```
+
+### Response
+
+```json
+{
+  "id": "feature-id",
+  "name": "feature-name",
+  "description": "feature-description",
+  "enabled": true
+}
+```
+
+## Add feature to a module
+
+Add a feature to a module
+
+```
+POST /features/:moduleId/
+```
+
+### Request
+
+#### Headers
+
+```
+Authorization
+Bearer YOUR
+```
+
+#### Body
+
+```json
+{
+  "name": "feature-name",
+  "description": "feature-description",
+  "enabled": true
+}
+```
+
+### Response
+
+```json
+{
+  "id": "feature-id",
+  "name": "feature-name",
+  "description": "feature-description",
+  "enabled": true,
+  "module_id": "module_id"
+}
+```
+
